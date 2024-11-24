@@ -5,7 +5,7 @@ build:
 .PHONY:image
 image:build
 ifdef TAG
-	docker buildx build --no-cache . -t awsdeepracercommunity/deepracer-simapp:$(TAG)-ext -f scripts/Dockerfile.localext --build-arg FROM_TAG=$(TAG)
+	docker buildx build --no-cache . -t awsdeepracercommunity/deepracer-simapp:5.3.2-cpu-ext -f scripts/Dockerfile.localext --build-arg FROM_TAG=5.3.2-cpu
 else
 	echo "Please set TAG variable."
 endif
